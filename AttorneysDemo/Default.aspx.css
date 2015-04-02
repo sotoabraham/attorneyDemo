@@ -1,0 +1,46 @@
+﻿ 
+.stat {
+    padding:5px 0;
+    margin-bottom: 5px;
+}
+
+.stat .value {
+    display: block;
+    font-size: 1.4em;
+    color: #690;
+}
+
+.chart svg {
+    height: 250px;
+}
+
+.nav-tabs {
+    margin-bottom: 0px;
+}
+
+.tab-content { 
+	border: 1px solid #ccc;
+	background: #fff;
+	-webkit-border-radius: 0 0 6px 6px;
+	   -moz-border-radius: 0 0 6px 6px;
+			border-radius: 0 0 6px 6px;
+    border-top-style: none;
+    padding: 10px;
+}
+
+.highlightRow {
+    background: #008080;
+}
+
+.sansLineOrMagin {
+    margin: 0px;
+    border: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*#lifetimeReport {
+    background-color: black;
+}*/
