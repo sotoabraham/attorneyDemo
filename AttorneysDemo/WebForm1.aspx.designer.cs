@@ -10,6 +10,6 @@
 namespace AttorneysDemo {
     
     
-    public partial class Default {
+    public partial class WebForm1 {
     }
 }

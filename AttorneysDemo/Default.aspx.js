@@ -28,39 +28,22 @@
 }
 
 function formatData(data) {
+    
+    data = eval(data);     
+
     var salesvolume = [];
     var commissions = [];
 
-    //after you get real data over, you may 
-    //need to parse it, below is how i would normally do it
+    var i;
+    for (i = 0; i < data.length; ++i) {
 
-    //var i;
-    //for (i = 0; i < data.length; ++i) {
-    //    salesvolume.push({ x: Date.parse(data[i].Day), y: data[i].SalesVolume });
-    //    commissions.push({ x: Date.parse(data[i].Day), y: data[i].Commissions });
-    //}
+        //for dates use date.parse like show in commented lines below
+        //salesvolume.push({ x: Date.parse(data[i].Day), y: data[i].SalesVolume });
+        //commissions.push({ x: Date.parse(data[i].Day), y: data[i].Commissions });
 
-    //this is the mock data, once you
-    //actually get real data over this 
-    //should be deleted
-
-    salesvolume.push({ x: 1, y: 2 });
-    salesvolume.push({ x: 2, y: 4 });
-    salesvolume.push({ x: 3, y: 1 });
-    salesvolume.push({ x: 4, y: 10 });
-    salesvolume.push({ x: 5, y: 2 });
-    salesvolume.push({ x: 6, y: 4 });
-    salesvolume.push({ x: 7, y: 1 });
-    salesvolume.push({ x: 8, y: 10 });
-
-    commissions.push({ x: 1, y: 5 });
-    commissions.push({ x: 2, y: 2 });
-    commissions.push({ x: 3, y: 9 });
-    commissions.push({ x: 4, y: 6 });
-    commissions.push({ x: 5, y: 5 });
-    commissions.push({ x: 6, y: 2 });
-    commissions.push({ x: 7, y: 9 });
-    commissions.push({ x: 8, y: 6 });
+        salesvolume.push({ x: data[i].Day, y: data[i].SalesVolume });
+        commissions.push({ x: data[i].Day, y: data[i].Commissions });
+    }
 
     return [
         {
@@ -147,9 +130,9 @@ $(document).ready(function () {
     fromDate.setDate(fromDate.getDate() - 90);
     fromDate = fromDate.toDateString();
 
-    getData('webMethod1', fromDate, toDate, '#tabChart1', colorScale.Green);
-    getData('webMethod1', fromDate, toDate, '#tabChart2', colorScale.BuGn);
-    getData('webMethod1', fromDate, toDate, '#tabChart3', colorScale.Orange); 
+    getData('webMethodTest', fromDate, toDate, '#tabChart1', colorScale.Green);
+    getData('webMethodTest', fromDate, toDate, '#tabChart2', colorScale.BuGn);
+    getData('webMethodTest', fromDate, toDate, '#tabChart3', colorScale.Orange);
 
 });
 
